@@ -29,6 +29,12 @@ describe('Here comes the bubble:', () => {
     assert.deepEqual(bubbleSort(array), [1, 2, 3, 4, 5, 6, 7, 8])
   })
 
+  it('it sorts in bubble form', () => {
+    let array = ([5, 4, 3, 2, 1])
+
+    assert.deepEqual(bubbleSort(array), [1, 2, 3, 4, 5])
+  })
+
   it('length of the array should be the same before and after sorting', () => {
     let array = ([7, 5, 6, 2, 4, 1, 8, 3])
 

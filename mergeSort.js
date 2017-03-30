@@ -11,22 +11,22 @@ const mergeSort = (full) => {
   return merge(mergeSort(left), mergeSort(right))
 }
 const merge = (left, right) => {
-  let final = [];
+  let merged = [];
 
   while (left.length && right.length) {
     if (left[0] <= right[0]) {
-      final.push(left.shift())
+      merged.push(left.shift())
     } else {
-      final.push(right.shift())
+      merged.push(right.shift())
     }
   }
   while (left.length) {
-    final.push(left.shift())
+    merged.push(left.shift())
   }
   while (right.length) {
-    final.push(right.shift())
+    merged.push(right.shift())
   }
-  return final;
+  return merged;
 }
 
 module.exports = mergeSort
